@@ -72,7 +72,8 @@ app.get('/Menu',function(req,res){
 const PersonRoute = require('./routes/PersonRoutes');
 // use the routes
 app.use('/Person',PersonRoute);  
-
+const MenuRoute =require('./routes/MenuRouters');
+app.use('/Menu',MenuRoute);
  
 
 
