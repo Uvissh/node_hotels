@@ -76,9 +76,12 @@ const PersonRoute = require('./routes/PersonRoutes');
 app.use('/Person',PersonRoute);  
 const MenuRoute =require('./routes/MenuRouters');
 app.use('/Menu',MenuRoute);
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> 44b55341ec2f04905ef71538fe9838c0bdd87df0
  
 
 
