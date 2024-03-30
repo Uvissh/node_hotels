@@ -17,6 +17,26 @@ router.post('/',async(req,res)=>{
     }
   
     })
+    router.get('/:TasteType',async(req,res)=>{// paramertized call of the person
+      try{
+        const TasteType =req.params.TasteType;//extract the work type from the url
+        if(TasteType =='sour'||TasteTypeType =='sweet'|| TasteType=='bitter'){
+          const response = await Menu.find({taste:TasteType});
+          console.log('response fetched');
+          res.status(200).json(response);
+  
+        }
+        else{
+          res.status(404).json({error:'invalid taste type'});
+  
+        }
+  
+      }catch(err){
+        console.log(err);
+        res.status(500).json({error:'internal server errror'});
+  
+      }
+     })
     // comment added for testing
 
     module.exports= router;

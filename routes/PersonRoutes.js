@@ -17,7 +17,12 @@ router.post('/',async(req,res)=>{
       console.log(err);
       res.status(500).json({error:'internal ki server error'});
     }
-})  
+}) 
+router.get('/Person',function(req,res){
+  res.send('chef')
+
+})
+
 router.get('/:workType',async(req,res)=>{// paramertized call of the person
     try{
       const workType =req.params.workType;//extract the work type from the url

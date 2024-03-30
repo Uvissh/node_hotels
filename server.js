@@ -5,6 +5,8 @@ const person= require('./models/Person');
 const MenuItem = require('./models/MenuItem');
 const bodyParser = require('body-parser');
 app.use(bodyParser.json());//stores in req.body
+ require('dotenv').config();
+ const PORT = process.env.PORT || 3000;
 
 
 app.get('/', function (req, res) {
@@ -72,6 +74,10 @@ app.get('/Menu',function(req,res){
 const PersonRoute = require('./routes/PersonRoutes');
 // use the routes
 app.use('/Person',PersonRoute);  
+const MenuRoute =require('./routes/MenuRouters');
+app.use('/Menu',MenuRoute);
+
+
 
  
 
